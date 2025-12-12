@@ -1,0 +1,11 @@
+viết ladingpage cho witi.vn logo witi.vn.svg
+nội dung tham khảo content.txt
+
+liên hệ nhớ để zalo, telegram của tôi, số điện thoại của tôi, tên tôi Đinh Tiến Vũ
+
+Thiết kế một giao diện landing page phong cách glassmorphism + liquid: nền gradient sâu, các khối “kính” bán trong suốt, viền sáng mỏng, blur mạnh, highlight phản xạ như chất lỏng. Thêm liquid blobs mềm, ánh sáng neon nhẹ, hạt bụi bokeh. Bố cục gồm header, hero, 3 feature cards, CTA.
+Tạo hiệu ứng tương tác: hover card nổi lên + tilt nhẹ theo chuột, bóng đổ mềm, viền sáng chạy theo cạnh; nút CTA ripple/shine khi hover.
+Tạo hiệu ứng động: blobs trôi chậm (floating), ánh sáng quét (light sweep), background noise subtle, micro-animations mượt 60fps.
+Phần tiêu đề có typing effect gõ chữ: “{SLOGAN}”, có con trỏ nhấp nháy.
+Hình ảnh minh hoạ phải phù hợp nội dung: tạo một hero illustration dạng 3D/abstract glass-liquid biểu tượng cho “{CHỦ_ĐỀ}” (ví dụ: AI, fintech, học tập, du lịch), đồng bộ màu với UI.
+Phong cách tối giản, hiện đại, sạch, typography rõ ràng, khoảng trắng tốt, cảm giác cao cấp.
