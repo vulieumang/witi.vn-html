@@ -1,0 +1,19 @@
+# OS & System
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
+
+# Dependencies (if any in future)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build & Dist
+dist/
+build/
+.env

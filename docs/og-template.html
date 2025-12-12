@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            font-family: 'Outfit', sans-serif;
+            background: url('og-image.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Overlay to darken slightly if needed */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 12, 41, 0.4);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logo-area {
+            margin-bottom: 40px;
+        }
+
+        .main-logo {
+            filter: brightness(0) invert(1);
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            background: linear-gradient(90deg, #fff, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 60px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 0 50px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: #00f2fe;
+            background: rgba(255, 255, 255, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 18px;
+            color: #e0e0e0;
+        }
+
+        .divider {
+            width: 100px;
+            height: 4px;
+            background: #00f2fe;
+            border-radius: 2px;
+            margin: 0 auto 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="logo-area">
+            <!-- Using SVG directly if file access issues, but img tag is fine locally -->
+            <img src="witi.vn_.svg" class="main-logo" alt="WiTi.VN">
+        </div>
+
+        <div class="divider"></div>
+
+        <h1>Giải Pháp Số Toàn Diện</h1>
+
+        <div class="features-grid">
+            <!-- Web & App (Main) -->
+            <div class="feature-card" style="border-color: #00f2fe; box-shadow: 0 0 30px rgba(0, 242, 254, 0.15);">
+                <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="feature-title">Thiết Kế</div>
+                <div class="feature-desc">Web & App Mobile</div>
+            </div>
+
+            <!-- Google -->
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fab fa-google"></i></div>
+                <div class="feature-title">Google</div>
+                <div class="feature-desc">Email & Drive</div>
+            </div>
+
+            <!-- Zoom & TradingView -->
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                <div class="feature-title">Tài Khoản Số</div>
+                <div class="feature-desc">Zoom, TradingView</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
