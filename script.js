@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- Typing Effect ---
     const typingText = document.querySelector('.typing-text');
-    const words = ["Chuyển Đổi Số", "Thiết Kế Website", "Tiếp Thị Số (Marketing)"];
+    const words = ["Zoom Bản Quyền & Tài Khoản Số", "Thiết Kế Website & Bảo Mật", "Email Doanh Nghiệp & CRM", "Marketing & Giải Pháp Số"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    
+
     function type() {
         const currentWord = words[wordIndex];
-        
+
         if (isDeleting) {
             typingText.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             typingText.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
         }
-        
+
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
             setTimeout(type, 2000); // Wait before deleting
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(type, isDeleting ? 100 : 200);
         }
     }
-    
-    if(typingText) type();
+
+    if (typingText) type();
 
     // --- Mobile Menu ---
     const menuBtn = document.querySelector('.mobile-menu-btn');
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
     }
 
-    if(menuBtn) menuBtn.addEventListener('click', toggleMenu);
-    if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+    if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
 
     mobileLinks.forEach(link => {
         link.addEventListener('click', toggleMenu);
@@ -56,15 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startCounters = (entries, observer) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting) {
+            if (entry.isIntersecting) {
                 const counter = entry.target;
                 const updateCount = () => {
                     const target = +counter.getAttribute('data-target');
                     const count = +counter.innerText;
-                    
+
                     // Lower inc to slow and higher to slow
                     const inc = target / speed;
-                    
+
                     if (count < target) {
                         // Add inc to count and output in counter
                         counter.innerText = Math.ceil(count + inc);
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const centerY = cardRect.top + cardHeight / 2;
             const mouseX = e.clientX - centerX;
             const mouseY = e.clientY - centerY;
-            
+
             const rotateX = (mouseY / (cardHeight / 2)) * -10; // Max rotation deg
             const rotateY = (mouseX / (cardWidth / 2)) * 10;
 
@@ -118,22 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
+            if (targetId === '#') return;
             const targetElement = document.querySelector(targetId);
-            if(targetElement){
+            if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
-                
+
                 // Update active state
                 document.querySelectorAll('.desktop-nav a').forEach(a => a.classList.remove('active'));
-                if(this.closest('.desktop-nav')) {
-                   this.classList.add('active');
+                if (this.closest('.desktop-nav')) {
+                    this.classList.add('active');
                 }
             }
         });
     });
-    
+
     // --- Intersection Observer for Active Link Highlighting ---
     const sections = document.querySelectorAll('section');
     const navLi = document.querySelectorAll('.desktop-nav ul li a');
