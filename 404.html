@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/img/witi.vn_.svg">
+    <title>404 - Không Tìm Thấy Trang | WiTi.VN</title>
+
+    <!-- Meta Tags -->
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .error-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-card {
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-bottom: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .error-desc {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Liquid Background Elements -->
+    <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="error-section">
+        <div class="glass-card error-card">
+            <div class="error-icon">
+                <i class="fas fa-ghost"></i>
+            </div>
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Oops! Trang không tồn tại</h2>
+            <p class="error-desc">Có vẻ như trang bạn đang tìm kiếm đã bị di chuyển hoặc không còn tồn tại trên hệ thống
+                của chúng tôi.</p>
+
+            <div class="hero-btns" style="justify-content: center; margin-bottom: 0;">
+                <a href="index.html" class="cta-btn primary ripple-effect">
+                    <i class="fas fa-home" style="margin-right: 8px;"></i>Quay về Trang chủ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
