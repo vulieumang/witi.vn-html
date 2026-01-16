@@ -156,4 +156,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Google Form Submission ---
+    const contactForm = document.getElementById('gform');
+    const formMsg = document.getElementById('form-msg');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('button[type="submit"]');
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Đang gửi... <i class="fas fa-spinner fa-spin"></i>';
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            })
+                .then(() => {
+                    // Success
+                    this.reset();
+                    formMsg.style.display = 'block';
+                    submitBtn.innerHTML = 'Gửi yêu cầu <i class="fas fa-paper-plane"></i>';
+                    submitBtn.disabled = false;
+
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMsg.style.display = 'none';
+                    }, 5000);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('Có lỗi xảy ra, vui lòng thử lại sau hoặc liên hệ trực tiếp qua Zalo/Telegram.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Gửi yêu cầu <i class="fas fa-paper-plane"></i>';
+                });
+        });
+    }
+
 });
